@@ -470,6 +470,20 @@ function copyTextList() {
   navigator.clipboard.writeText(el.innerText).then(() => showToast('已複製到剪貼板'));
 }
 
+function toggleTextPanel() {
+  const panel = document.getElementById('text-panel');
+  const btnExpand = document.getElementById('btn-expand-text-panel');
+  if (!panel) return;
+  const isHidden = panel.classList.toggle('hidden');
+  if (btnExpand) {
+    if (isHidden) {
+      btnExpand.classList.remove('hidden');
+    } else {
+      btnExpand.classList.add('hidden');
+    }
+  }
+}
+
 // EVENT MODAL
 function openEventModal(evt) {
   state.activeEvent = evt;
