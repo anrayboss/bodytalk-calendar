@@ -474,12 +474,12 @@ function toggleTextPanel() {
   const panel = document.getElementById('text-panel');
   const btnExpand = document.getElementById('btn-expand-text-panel');
   if (!panel) return;
-  const isHidden = panel.classList.toggle('hidden');
+  const isCollapsed = panel.classList.toggle('text-panel-collapsed');
   if (btnExpand) {
-    if (isHidden) {
-      btnExpand.classList.remove('hidden');
+    if (isCollapsed) {
+      btnExpand.classList.add('is-expanded');
     } else {
-      btnExpand.classList.add('hidden');
+      btnExpand.classList.remove('is-expanded');
     }
   }
 }

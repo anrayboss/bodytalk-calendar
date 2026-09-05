@@ -849,3 +849,16 @@ select.form-input {
     display: none;
   }
 }
+
+/* --- Collapsed text panel state --- */
+#text-panel.text-panel-collapsed {
+  display: none !important;
+}
+
+#btn-expand-text-panel {
+  display: none;
+}
+
+#btn-expand-text-panel.is-expanded {
+  display: flex !important;
+}
