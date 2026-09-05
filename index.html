@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW" class="dark">
 
 <head>
@@ -90,6 +90,13 @@
       </button>
 
       <div class="h-5 w-px bg-slate-200 dark:bg-slate-700"></div>
+
+      <!-- Guest Admin toggle (demo mode) -->
+      <button id="btn-guest-admin" onclick="toggleGuestAdmin()" title="切換訪客編輯模式（不需登入）"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition
+               border-amber-400/40 text-amber-600 dark:text-amber-400 bg-amber-500/10 hover:bg-amber-500/20">
+        🔒 訪客模式
+      </button>
 
       <!-- Auth -->
       <button id="btn-auth" onclick="openAuthModal()"

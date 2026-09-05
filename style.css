@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    style.css - bodytalk-calendar
    ========================================= */
 
@@ -35,6 +35,18 @@
   border: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+/* --- Guest Admin active state --- */
+.guest-admin-active {
+  background: #f59e0b20 !important;
+  border-color: #f59e0b80 !important;
+  color: #d97706 !important;
+  box-shadow: 0 0 0 2px #f59e0b40;
+}
+.dark .guest-admin-active {
+  color: #fbbf24 !important;
+  box-shadow: 0 0 0 2px #f59e0b30;
 }
 
 .toolbar-btn:hover {

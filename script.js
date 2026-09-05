@@ -18,10 +18,31 @@ let state = {
   calView: 'month',
   activeEvent: null,
   user: null,
+  guestAdmin: false, // demo 模式：不需登入即可全功能編輯（只存 localStorage）
   searchQuery: '',
   undoStack: [],
   redoStack: [],
 };
+
+// 判斷是否有管理員權限（登入 admin 或 guestAdmin 模式）
+function isAdminMode() { return state.guestAdmin || state.user?.role === 'admin'; }
+
+// 切換 guestAdmin 模式
+function toggleGuestAdmin() {
+  state.guestAdmin = !state.guestAdmin;
+  const btn = document.getElementById('btn-guest-admin');
+  if (state.guestAdmin) {
+    btn.textContent = '🔓 訪客編輯中';
+    btn.classList.add('guest-admin-active');
+    showToast('訪客編輯模式：變更只存在本機，不會推送到 GitHub');
+  } else {
+    btn.textContent = '🔒 訪客模式';
+    btn.classList.remove('guest-admin-active');
+    showToast('已關閉訪客編輯模式');
+  }
+  updateAuthUI();
+  renderCalendar();
+}
 
 // INIT
 async function init() {
@@ -131,7 +152,7 @@ function updateAuthUI() {
     roleBadge.textContent = u.role === 'admin' ? '⚙️ 管理員' : '👤 協作者';
     roleBadge.className = 'text-xs ' + (u.role === 'admin' ? 'text-amber-500' : 'text-teal-500');
     btnLogout.style.display = '';
-    if (u.role === 'admin') {
+    if (isAdminMode()) {
       btnAdd.style.display = '';
       if (btnAddMob) btnAddMob.style.display = '';
     }
@@ -139,8 +160,9 @@ function updateAuthUI() {
     label.textContent = '設定登入';
     loggedIn.classList.add('hidden');
     btnLogout.style.display = 'none';
-    btnAdd.style.display = 'none';
-    if (btnAddMob) btnAddMob.style.display = 'none';
+    // guestAdmin 模式下仍顯示新增按鈕
+    btnAdd.style.display = state.guestAdmin ? '' : 'none';
+    if (btnAddMob) btnAddMob.style.display = state.guestAdmin ? '' : 'none';
   }
 }
 
@@ -481,10 +503,11 @@ function openEventModal(evt) {
     aEl.innerHTML = '<p style="font-size:13px;color:#94a3b8">尚無人接待，快來認領！</p>';
   }
 
-  document.getElementById('btn-claim').style.display    = (u && !evt.assignee) ? '' : 'none';
-  document.getElementById('btn-unclaim').style.display  = (u && (isAssignee || isAdmin) && evt.assignee) ? '' : 'none';
-  document.getElementById('btn-edit-event').style.display   = isAdmin ? '' : 'none';
-  document.getElementById('btn-delete-event').style.display = isAdmin ? '' : 'none';
+  const adminMode = isAdminMode();
+  document.getElementById('btn-claim').style.display    = ((u || state.guestAdmin) && !evt.assignee) ? '' : 'none';
+  document.getElementById('btn-unclaim').style.display  = ((u || state.guestAdmin) && (isAssignee || adminMode) && evt.assignee) ? '' : 'none';
+  document.getElementById('btn-edit-event').style.display   = adminMode ? '' : 'none';
+  document.getElementById('btn-delete-event').style.display = adminMode ? '' : 'none';
 
   document.getElementById('event-modal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
@@ -505,7 +528,15 @@ function setInfoRow(rowId, fieldId, val) {
 
 // CLAIM / UNCLAIM
 async function claimEvent() {
-  if (!state.user) { openAuthModal(); return; }
+  if (!state.user && !state.guestAdmin) { openAuthModal(); return; }
+  if (state.guestAdmin && !state.activeEvent.assignee) {
+    const name = prompt('輸入接待者名稱（訪客模式）：', '');
+    if (!name) return;
+    await updateEventField(state.activeEvent.id, { assignee: name }, `認領活動：${state.activeEvent.title}`);
+    const updated = state.events.find(e => e.id === state.activeEvent.id);
+    if (updated) openEventModal(updated);
+    return;
+  }
   const evt = state.activeEvent;
   if (!evt) return;
   await updateEventField(evt.id, { assignee: state.user.username }, `認領活動：${evt.title}`);
@@ -598,6 +629,14 @@ async function updateEventField(evtId, fields, commitMsg) {
   renderCalendar(); renderTextList();
 }
 async function saveEventsToGitHub(commitMsg) {
+  // guestAdmin 模式：只存 localStorage，不推 GitHub
+  if (state.guestAdmin && !state.user?.token) {
+    const content = { version:'1.0', updated_at: new Date().toISOString(), events: state.events };
+    localStorage.setItem('bt-events-local', JSON.stringify(content));
+    updateLastSync();
+    showToast(`（訪客）${commitMsg} — 已存本機`);
+    return;
+  }
   if (!state.user?.token) { showToast('請先設定 GitHub Token', 'error'); return; }
   showSyncStatus(true);
   try {
