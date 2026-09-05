@@ -1,0 +1,11 @@
+﻿{
+  "app": {
+    "name": "身體對話 活動月曆",
+    "repo_owner": "anrayboss",
+    "repo_name": "bodytalk-calendar",
+    "branch": "main"
+  },
+  "roles": {
+    "anrayboss": "admin"
+  }
+}
