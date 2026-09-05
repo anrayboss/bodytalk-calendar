@@ -31,13 +31,14 @@ function isAdminMode() { return state.guestAdmin || state.user?.role === 'admin'
 function toggleGuestAdmin() {
   state.guestAdmin = !state.guestAdmin;
   const btn = document.getElementById('btn-guest-admin');
+  const btnMob = document.getElementById('btn-guest-admin-mob');
   if (state.guestAdmin) {
-    btn.textContent = '🔓 訪客編輯中';
-    btn.classList.add('guest-admin-active');
+    if (btn) { btn.textContent = '🔓 訪客編輯中'; btn.classList.add('guest-admin-active'); }
+    if (btnMob) { btnMob.textContent = '🔓'; btnMob.classList.add('guest-admin-active'); }
     showToast('訪客編輯模式：變更只存在本機，不會推送到 GitHub');
   } else {
-    btn.textContent = '🔒 訪客模式';
-    btn.classList.remove('guest-admin-active');
+    if (btn) { btn.textContent = '🔒 訪客模式'; btn.classList.remove('guest-admin-active'); }
+    if (btnMob) { btnMob.textContent = '🔒'; btnMob.classList.remove('guest-admin-active'); }
     showToast('已關閉訪客編輯模式');
   }
   updateAuthUI();
@@ -680,8 +681,14 @@ function redoAction() {
   updateUndoRedoUI(); renderCalendar(); renderTextList();
 }
 function updateUndoRedoUI() {
-  document.getElementById('btn-undo').disabled = state.undoStack.length === 0;
-  document.getElementById('btn-redo').disabled = state.redoStack.length === 0;
+  const noUndo = state.undoStack.length === 0;
+  const noRedo = state.redoStack.length === 0;
+  document.getElementById('btn-undo').disabled = noUndo;
+  document.getElementById('btn-redo').disabled = noRedo;
+  const undoMob = document.getElementById('btn-undo-mob');
+  const redoMob = document.getElementById('btn-redo-mob');
+  if (undoMob) undoMob.disabled = noUndo;
+  if (redoMob) redoMob.disabled = noRedo;
 }
 
 // SEARCH

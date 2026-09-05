@@ -114,6 +114,10 @@
 
     <!-- Mobile menu button -->
     <div class="md:hidden flex items-center gap-2">
+      <button id="btn-guest-admin-mob" onclick="toggleGuestAdmin()" title="訪客編輯模式"
+        class="text-xs px-2 py-1.5 rounded-lg border border-amber-400/40 text-amber-500 bg-amber-500/10 font-medium transition">
+        🔒
+      </button>
       <button onclick="shareApp()" class="toolbar-btn"><i class="fa-solid fa-share-nodes"></i></button>
       <button onclick="openAuthModal()" class="toolbar-btn"><i class="fa-solid fa-user-circle"></i></button>
       <button onclick="toggleMobileMenu()" class="toolbar-btn"><i class="fa-solid fa-bars text-lg"></i></button>
@@ -139,6 +143,20 @@
     </div>
     <button onclick="toggleTheme()" class="toolbar-btn"><i class="fa-solid fa-circle-half-stroke"></i><span
         class="text-xs">主題</span></button>
+    <!-- Undo / Redo -->
+    <button id="btn-undo-mob" onclick="undoAction()" disabled title="復原"
+      class="toolbar-btn disabled:opacity-40 disabled:cursor-not-allowed">
+      <i class="fa-solid fa-rotate-left"></i><span class="text-xs">復原</span>
+    </button>
+    <button id="btn-redo-mob" onclick="redoAction()" disabled title="重做"
+      class="toolbar-btn disabled:opacity-40 disabled:cursor-not-allowed">
+      <i class="fa-solid fa-rotate-right"></i><span class="text-xs">重做</span>
+    </button>
+    <!-- Guest Admin -->
+    <button onclick="toggleGuestAdmin();toggleMobileMenu()"
+      class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-amber-400/40 text-amber-600 dark:text-amber-400 bg-amber-500/10 text-xs font-medium transition hover:bg-amber-500/20">
+      🔒 訪客編輯模式
+    </button>
     <button id="btn-add-event-mobile" onclick="openEventForm()" style="display:none"
       class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-xs font-medium">
       <i class="fa-solid fa-plus"></i><span>新增活動</span>
