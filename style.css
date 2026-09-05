@@ -28,7 +28,7 @@
   gap: 4px;
   padding: 6px 10px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   color: #64748b;
   transition: all .15s;
   background: transparent;
@@ -54,7 +54,7 @@
   gap: 4px;
   padding: 5px 10px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #64748b;
   background: transparent;
   border: none;
@@ -99,7 +99,7 @@
   color: #64748b;
   cursor: pointer;
   transition: all .15s;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-btn:hover {
@@ -193,7 +193,7 @@
 /* --- Form elements --- */
 .form-label {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #64748b;
   margin-bottom: 4px;
@@ -209,7 +209,7 @@
   width: 100%;
   padding: 8px 12px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   color: #1e293b;
@@ -267,7 +267,7 @@ select.form-input {
 .cal-dow-cell {
   text-align: center;
   padding: 8px 4px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #94a3b8;
   text-transform: uppercase;
@@ -305,7 +305,7 @@ select.form-input {
 }
 
 .cal-day-num {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #64748b;
   width: 24px;
@@ -338,7 +338,7 @@ select.form-input {
 .evt-chip {
   padding: 2px 7px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
@@ -426,14 +426,14 @@ select.form-input {
 }
 
 .week-day-head .dow {
-  font-size: 14px;
+  font-size: 16px;
   color: #94a3b8;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .week-day-head .dom {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #475569;
   line-height: 1.2;
@@ -452,7 +452,7 @@ select.form-input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .cal-week-body {
@@ -473,7 +473,7 @@ select.form-input {
 
 .cal-week-time-slot {
   height: 48px;
-  font-size: 14px;
+  font-size: 16px;
   color: #94a3b8;
   text-align: right;
   padding-right: 6px;
@@ -516,7 +516,7 @@ select.form-input {
   right: 2px;
   border-radius: 6px;
   padding: 3px 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   overflow: hidden;
@@ -568,7 +568,7 @@ select.form-input {
 
 .cal-day-time-slot {
   height: 64px;
-  font-size: 14px;
+  font-size: 16px;
   color: #94a3b8;
   text-align: right;
   padding-right: 8px;
@@ -600,7 +600,7 @@ select.form-input {
   right: 8px;
   border-radius: 8px;
   padding: 6px 10px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   overflow: hidden;
   line-height: 1.4;
@@ -644,7 +644,7 @@ select.form-input {
 
 /* Text list */
 #text-list {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .tl-date-header {
@@ -652,7 +652,7 @@ select.form-input {
   color: #10b981;
   margin-top: 10px;
   margin-bottom: 2px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .tl-event {
@@ -690,10 +690,11 @@ select.form-input {
   }
 
   .evt-chip {
-    font-size: 14px;
+    font-size: 16px;
     padding: 1px 5px;
   }
 }
+
 /* =========================================
    EVENT CARDS (Month view) - redesigned
    Title + bottom tags, no time on card
@@ -708,11 +709,18 @@ select.form-input {
   gap: 3px;
   min-height: 36px;
 }
-.evt-card:hover { opacity: 0.88; transform: scale(1.01); }
-.evt-card:active { transform: scale(0.99); }
+
+.evt-card:hover {
+  opacity: 0.88;
+  transform: scale(1.01);
+}
+
+.evt-card:active {
+  transform: scale(0.99);
+}
 
 .evt-card-title {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.35;
   display: -webkit-box;
@@ -729,7 +737,7 @@ select.form-input {
 }
 
 .evt-tag {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 500;
   padding: 1px 5px;
   border-radius: 999px;
@@ -738,55 +746,94 @@ select.form-input {
 }
 
 .evt-tag-assignee {
-  background: rgba(16,185,129,0.15);
+  background: rgba(16, 185, 129, 0.15);
   color: #059669;
 }
+
 .dark .evt-tag-assignee {
-  background: rgba(16,185,129,0.2);
+  background: rgba(16, 185, 129, 0.2);
   color: #34d399;
 }
 
 .evt-tag-empty {
-  background: rgba(148,163,184,0.15);
+  background: rgba(148, 163, 184, 0.15);
   color: #94a3b8;
   border: 1px dashed #cbd5e1;
 }
+
 .dark .evt-tag-empty {
   border-color: #475569;
   color: #64748b;
 }
 
 .evt-tag-loc {
-  background: rgba(99,102,241,0.1);
+  background: rgba(99, 102, 241, 0.1);
   color: #6366f1;
 }
+
 .dark .evt-tag-loc {
-  background: rgba(99,102,241,0.2);
+  background: rgba(99, 102, 241, 0.2);
   color: #a5b4fc;
 }
 
 .evt-tag-host {
-  background: rgba(245,158,11,0.1);
+  background: rgba(245, 158, 11, 0.1);
   color: #b45309;
 }
+
 .dark .evt-tag-host {
-  background: rgba(245,158,11,0.15);
+  background: rgba(245, 158, 11, 0.15);
   color: #fbbf24;
 }
 
 /* Card color themes per type */
-.evt-card.evt-public    { background: #fef3c7; color: #92400e; }
-.evt-card.evt-course    { background: #ede9fe; color: #5b21b6; }
-.evt-card.evt-study_group { background: #ccfbf1; color: #134e4a; }
-.dark .evt-card.evt-public    { background: rgba(245,158,11,0.2); color: #fcd34d; }
-.dark .evt-card.evt-course    { background: rgba(139,92,246,0.2); color: #c4b5fd; }
-.dark .evt-card.evt-study_group { background: rgba(20,184,166,0.2); color: #5eead4; }
+.evt-card.evt-public {
+  background: #fef3c7;
+  color: #92400e;
+}
 
-.evt-card.search-match { outline: 2px solid #f59e0b; }
+.evt-card.evt-course {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.evt-card.evt-study_group {
+  background: #ccfbf1;
+  color: #134e4a;
+}
+
+.dark .evt-card.evt-public {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+.dark .evt-card.evt-course {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+}
+
+.dark .evt-card.evt-study_group {
+  background: rgba(20, 184, 166, 0.2);
+  color: #5eead4;
+}
+
+.evt-card.search-match {
+  outline: 2px solid #f59e0b;
+}
 
 /* Mobile: compact card */
 @media (max-width: 768px) {
-  .evt-card { min-height: 28px; padding: 3px 5px; }
-  .evt-card-title { font-size: 10px; -webkit-line-clamp: 1; }
-  .evt-card-tags { display: none; }
+  .evt-card {
+    min-height: 28px;
+    padding: 3px 5px;
+  }
+
+  .evt-card-title {
+    font-size: 14px;
+    -webkit-line-clamp: 1;
+  }
+
+  .evt-card-tags {
+    display: none;
+  }
 }
