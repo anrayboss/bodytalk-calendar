@@ -350,7 +350,8 @@ function buildCard(evt) {
   if (evt.location) {
     const locTag = document.createElement('span');
     locTag.className = 'evt-tag evt-tag-loc';
-    locTag.textContent = evt.location;
+    const m = evt.location.match(/^\[(.*?)\](?:\(.*\))?$/);
+    locTag.textContent = m ? m[1] : evt.location;
     tags.appendChild(locTag);
   }
 
@@ -537,8 +538,18 @@ function closeEventModal(e) {
 
 function setInfoRow(rowId, fieldId, val) {
   const row = document.getElementById(rowId);
-  if (val) { document.getElementById(fieldId).textContent = val; row.classList.remove('hidden'); }
-  else row.classList.add('hidden');
+  if (val) {
+    const el = document.getElementById(fieldId);
+    const m = val.match(/^\[(.*?)\]\((https?:\/\/[^\s]+)\)$/);
+    if (m) {
+      el.innerHTML = `<a href="${m[2]}" target="_blank" rel="noopener" class="underline text-emerald-600 dark:text-emerald-400 hover:opacity-80 transition-opacity">${m[1]} <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5"></i></a>`;
+    } else {
+      el.textContent = val;
+    }
+    row.classList.remove('hidden');
+  } else {
+    row.classList.add('hidden');
+  }
 }
 
 // CLAIM / UNCLAIM
