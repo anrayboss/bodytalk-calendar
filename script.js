@@ -388,8 +388,8 @@ function buildTimeBlock(evt, hourPx, mode) {
 }
 
 function cleanTitle(t) {
-  const stripped = t.replace(/^[✨\s]*【[^】]*】/, '').trim() || t.replace(/^[✨\s]*/, '').trim();
-  return stripped || t;
+  // 只去除開頭的 emoji，保留【】及其內容
+  return t.replace(/^[\s\p{Emoji_Presentation}\p{Extended_Pictographic}]+/u, '').trim() || t;
 }
 
 // CALENDAR TITLE & NAV

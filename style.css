@@ -833,20 +833,47 @@ select.form-input {
   outline: 2px solid #f59e0b;
 }
 
-/* Mobile: compact card */
+/* Mobile: 參考 sglrt 月曆卡片風格 */
 @media (max-width: 768px) {
-  .evt-card {
-    min-height: 28px;
-    padding: 3px 5px;
+  .cal-day-cell {
+    padding: 2px 1px;
+    overflow: hidden;
   }
 
+  .evt-card {
+    border-radius: 3px;
+    padding: 2px 5px;
+    min-height: unset;
+    gap: 0;
+    border-left: 3px solid currentColor;
+    background: transparent !important;
+  }
+
+  .evt-card.evt-public       { border-left-color: #d97706; background: rgba(254,243,199,0.6) !important; color: #92400e; }
+  .evt-card.evt-course       { border-left-color: #7c3aed; background: rgba(237,233,254,0.6) !important; color: #5b21b6; }
+  .evt-card.evt-study_group  { border-left-color: #0d9488; background: rgba(204,251,241,0.6) !important; color: #134e4a; }
+  .dark .evt-card.evt-public       { border-left-color: #f59e0b; background: rgba(245,158,11,0.12) !important; color: #fcd34d; }
+  .dark .evt-card.evt-course       { border-left-color: #8b5cf6; background: rgba(139,92,246,0.12) !important; color: #c4b5fd; }
+  .dark .evt-card.evt-study_group  { border-left-color: #14b8a6; background: rgba(20,184,166,0.12) !important; color: #5eead4; }
+
   .evt-card-title {
-    font-size: 14px;
-    -webkit-line-clamp: 1;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    -webkit-line-clamp: unset;
   }
 
   .evt-card-tags {
     display: none;
+  }
+
+  .evt-card:hover {
+    transform: none;
+    opacity: 0.85;
   }
 }
 
