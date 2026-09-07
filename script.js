@@ -431,12 +431,22 @@ function setCalView(v) {
   renderCalendar();
 }
 
-// TEXT LIST
+// TEXT LIST - Synced with Sep. 2026 Event.md
+const SEP_2026_RAW_MD = "身體對話九月份活動課程\n> 空靈鼓 Amiko 母親彩鳳會開\n> 非洲鼓九月尚未成班\n> 台北場地：[身體對話](https://maps.app.goo.gl/AJAVotrdZZsKPW7g9)\n> 地板教室：[浮室](https://maps.app.goo.gl/auUVMRNejTjgqneN7)\n> [山山瑜珈](https://maps.app.goo.gl/oJDUbvR3RFLAz3WN8)\n> [陽明山國家公園遊客中心](https://maps.app.goo.gl/ZH2XGU2PSRd2UaSY8)\n> 竹北場地：[Anjali Café](https://maps.app.goo.gl/a5fKR2vetGAcKHCG7)\n> 台中場地：[美村園區世代共融教室](https://maps.app.goo.gl/kmdUfEbMUAK3MmcG6)\n\n***公益活動***\n【公益讀書會】Let Them 隨他們去(台中場)\n9/02(三) 14:00-17:00\nhttps://bodytalk.tw/s/1150902\n\n【生活易經】帶你趨吉避凶的生活經典\n9/03(四) 10:00-12:00\nhttps://bodytalk.tw/s/1150903\n\n【從紅塵到心靈的解藥】\n9/05(六) 14:00-17:00\nhttps://bodytalk.tw/s/1150905\n\n一場「意識對話」與「身體連結」的饗宴\n9/06(日) 13:30-19:30\n【生而為女，看見身為「女性」的生命元素】\n用書對話x生命故事流動x思考與探索\n【透過瑜珈 擁抱自己】\nhttps://bodytalk.tw/s/1150906\n\n【奧修講老子道德經】讀書會\n9/07(一) 14:30-16:30\nhttps://bodytalk.tw/s/1150824\n\n【昆達里尼瑜珈】打通下三輪，釋放腰臀緊繃與焦慮\n9/07(一) 14:30-16:30\n地點：地板教室\nhttps://bodytalk.tw/s/1150907\n\n【擁抱自己】頌缽×身體×天然精油體驗會🌿(台中場)\n9/11(五) 14:00-16:00\nhttps://bodytalk.tw/s/1150911\n\n【秋季耳穴保健】自我保養，體驗舒壓樂趣(台中場)\n9/12(六) 14:00-17:00\nhttps://bodytalk.tw/s/1150912\n\n【城市淨心】9月森林靜心內在覺察工作坊(台北場)\n9/13(日) 10:00-17:00\nhttps://bodytalk.tw/s/1150913\n\n【正念自我照顧系列】\n和人相處讓你心累的時候，怎麼照顧自己\n9/14(一) 14:00-16:00\nhttps://bodytalk.tw/s/1150914\n\n【內觀流瑜珈 Inside Flow 體驗】\n9/14(一) 16:30-18:30\nhttps://bodytalk.tw/s/11509141\n\n【禪舞靜心沙龍】九月微風拂雲，聽身體說話\n9/15(二)10:30-12:30 #待認領\nhttps://bodytalk.tw/s/1150915\n\n【呼吸工作坊】\n9/17(四) 10:30-12:30\n地點：地板教室\nhttps://bodytalk.tw/s/1150917\n\n【喚醒生命的能量之柱】昆達里尼基礎脊椎序列體位法(台中場)\n9/17(四) 15:00-17:00\nhttps://bodytalk.tw/s/11509171\n\n【站樁工作坊】身體結構調理體驗\n9/19(六) 10:00-12:00\nhttps://bodytalk.tw/s/1150919\n\n【城市淨心】9月一日工作坊(台中場)\n9/20(日) 10:00-18:30\nhttps://bodytalk.tw/s/1150920\n\n【一盞茶，遇見自己】\n一段回到自己的旅程\n9/21(一) 14:00-17:00\nhttps://bodytalk.tw/s/1150921\n\n【城市淨心】9月一日工作坊(竹北場)\n9/27(日) 10:00-19:30\nhttps://bodytalk.tw/s/1150927\n\n【OH影玩】從拍照看見內心世界 (台中場)\n09/29(二) 14:00-17:00\nhttps://bodytalk.tw/s/1150929\n\n***正式課程****\n✨【健康歡樂鼓】開啟與身體對話✨\n7/31(五)起每週五舉辦\n13:30-14:50\nhttps://bodytalk.tw/s/1150717\n\n✨【心靈牌卡潛意識導引基礎班】第五期✨\n9/18(五) 10:00-18:00\n10/9(五) 13:30-17:30\nhttps://bodytalk.tw/s/oh88cardall\n\n✨【空靈鼓教學】實體初階班✨\n9/06(日)起每週日舉辦12堂\n10:30-12:00\nhttps://bodytalk.tw/s/Drum\n\n✨【昆達里尼瑜伽】✨實體課\n5人開班預告\nhttps://bodytalk.tw/s/KundaliniClass\n\n***自主舉辦團練共學讀書會***\n【公益讀書會】\n遇見生命的無限可能\n每週四14:00-17:00 方珍主持\n\n【潛意識探索社】\n不定時舉辦線上線下活動\n慧萍主持\n\n@以上報名方式由主持人@\n在群內開放活動報名\n有興趣找主持詳問\n\n【潛意識導引讀玩書會】台中場\n遇見生命的無限可能\n9/9起週三14:00-17:00\nAmiko 主持\nhttps://bodytalk.tw/s/1150909\n\n***想找人陪伴聊聊解惑***";
+
 function renderTextList() {
   const el = document.getElementById('text-list');
+  if (!el) return;
   const d = state.currentDate;
   const year = d.getFullYear(), month = d.getMonth();
 
+  // If 2026-09, render the synced full markdown view
+  if (year === 2026 && month === 8) {
+    renderSep2026Markdown(SEP_2026_RAW_MD);
+    return;
+  }
+
+  // Default fallback for other months
   const monthEvts = state.events
     .filter(e => { const ed = new Date(e.date); return ed.getFullYear()===year && ed.getMonth()===month; })
     .sort((a,b) => a.date.localeCompare(b.date) || a.start_time.localeCompare(b.start_time));
@@ -461,14 +471,124 @@ function renderTextList() {
   el.innerHTML = html;
 }
 
+function renderSep2026Markdown(md) {
+  const el = document.getElementById('text-list');
+  if (!el) return;
+
+  const lines = md.split('\n');
+  let html = '';
+  let inQuote = false;
+  let quoteLines = [];
+
+  function flushQuote() {
+    if (!quoteLines.length) return;
+    html += '<div class="my-2.5 p-2.5 bg-slate-50 dark:bg-slate-800/60 rounded-lg text-xs border-l-2 border-teal-500 text-slate-600 dark:text-slate-300 space-y-1">';
+    quoteLines.forEach(ql => {
+      const qlFmt = ql.replace(/\[(.*?)\]\((https?:\/\/[^\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener" class="underline text-teal-600 dark:text-teal-400 hover:opacity-80 transition-opacity">$1</a>');
+      html += `<div>${qlFmt}</div>`;
+    });
+    html += '</div>';
+    quoteLines = [];
+    inQuote = false;
+  }
+
+  // Pre-index events by registration_url and title keyword
+  const evtByUrl = {};
+  state.events.forEach(e => {
+    if (e.registration_url) evtByUrl[e.registration_url.trim()] = e;
+  });
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      if (inQuote) flushQuote();
+      continue;
+    }
+
+    if (trimmed.startsWith('>')) {
+      inQuote = true;
+      quoteLines.push(trimmed.replace(/^>\s*/, ''));
+      continue;
+    } else if (inQuote) {
+      flushQuote();
+    }
+
+    // Title header
+    if (trimmed === '身體對話九月份活動課程') {
+      html += `<div class="text-sm font-bold text-teal-700 dark:text-teal-400 pb-2 mb-2 border-b border-slate-200 dark:border-slate-800">${trimmed}</div>`;
+      continue;
+    }
+
+    // Section header like ***公益活動***
+    if (/^\*{3,}.*?\*{3,}$/.test(trimmed)) {
+      const secTitle = trimmed.replace(/\*/g, '');
+      html += `<div class="mt-4 mb-2 pt-2 border-t border-slate-200 dark:border-slate-800 font-bold text-xs text-teal-800 dark:text-teal-300 flex items-center gap-1.5"><span class="w-1.5 h-3 bg-teal-500 rounded-full inline-block"></span>${secTitle}</div>`;
+      continue;
+    }
+
+    // URL link
+    if (trimmed.startsWith('https://')) {
+      html += `<div class="mb-2.5"><a href="${trimmed}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-[11px] text-indigo-600 dark:text-indigo-400 hover:underline break-all"><i class="fa-solid fa-link text-[10px]"></i> ${trimmed}</a></div>`;
+      continue;
+    }
+
+    // Event title line (detect by 【 or ✨ or 一場)
+    if (trimmed.startsWith('【') || trimmed.startsWith('✨') || trimmed.startsWith('一場')) {
+      // Try to find matching event in state.events
+      let matchedEvt = null;
+      // look ahead a few lines for registration_url
+      for (let j = i + 1; j <= Math.min(i + 4, lines.length - 1); j++) {
+        const candidateUrl = lines[j].trim();
+        if (candidateUrl.startsWith('https://') && evtByUrl[candidateUrl]) {
+          matchedEvt = evtByUrl[candidateUrl];
+          break;
+        }
+      }
+
+      // Fallback matching by title prefix
+      if (!matchedEvt) {
+        const cleanT = trimmed.replace(/^[✨\s]*/, '').split('(')[0].split('（')[0].trim();
+        matchedEvt = state.events.find(e => e.title.includes(cleanT) || cleanT.includes(e.title));
+      }
+
+      let assigneeBadge = '';
+      let clickAttr = '';
+      if (matchedEvt) {
+        clickAttr = `onclick="openEventModalById('${matchedEvt.id}')"`;
+        if (matchedEvt.assignee) {
+          assigneeBadge = ` <span class="ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">@${matchedEvt.assignee}</span>`;
+        }
+      }
+
+      html += `<div class="font-semibold text-xs text-slate-800 dark:text-slate-100 hover:text-teal-600 dark:hover:text-teal-400 cursor-pointer transition-colors mt-2" ${clickAttr}>${trimmed}${assigneeBadge}</div>`;
+      continue;
+    }
+
+    // Regular metadata lines (date, time, host, notice, etc.)
+    html += `<div class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">${trimmed}</div>`;
+  }
+
+  if (inQuote) flushQuote();
+  el.innerHTML = html;
+}
+
 function openEventModalById(id) {
   const evt = state.events.find(e => e.id === id);
   if (evt) openEventModal(evt);
 }
 
 function copyTextList() {
+  const d = state.currentDate;
+  if (d.getFullYear() === 2026 && d.getMonth() === 8) {
+    navigator.clipboard.writeText(SEP_2026_RAW_MD).then(() => showToast('已複製九月份活動清單全文'));
+    return;
+  }
   const el = document.getElementById('text-list');
-  navigator.clipboard.writeText(el.innerText).then(() => showToast('已複製到剪貼板'));
+  if (el) {
+    navigator.clipboard.writeText(el.innerText).then(() => showToast('已複製到剪貼板'));
+  }
 }
 
 function toggleTextPanel() {
