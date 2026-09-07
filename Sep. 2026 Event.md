@@ -4,6 +4,7 @@
 > 台北場地：[身體對話](https://maps.app.goo.gl/AJAVotrdZZsKPW7g9)
 > 地板教室：[浮室](https://maps.app.goo.gl/auUVMRNejTjgqneN7)
 > [山山瑜珈](https://maps.app.goo.gl/oJDUbvR3RFLAz3WN8)
+> [陽明山國家公園遊客中心](https://maps.app.goo.gl/ZH2XGU2PSRd2UaSY8)
 > 竹北場地：[Anjali Café](https://maps.app.goo.gl/a5fKR2vetGAcKHCG7)
 > 台中場地：[美村園區世代共融教室](https://maps.app.goo.gl/kmdUfEbMUAK3MmcG6)
 
